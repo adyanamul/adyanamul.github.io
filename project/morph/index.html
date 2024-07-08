@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morph L2</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .header-bg {
+        background-image: url("https://source.unsplash.com/random/1920x1080");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="header-bg text-white">
+      <div class="bg-black bg-opacity-50">
+        <div
+          class="container mx-auto px-4 py-6 flex justify-between items-center"
+        >
+          <h1 class="text-3xl font-bold">ADE MULYANA</h1>
+          <nav>
+            <ul class="flex space-x-4">
+              <li><a href="#" class="hover:text-yellow-300">Home</a></li>
+              <li><a href="#" class="hover:text-yellow-300">About</a></li>
+              <li><a href="#" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+          <img
+            src="https://docs.morphl2.io/assets/images/devintro-af1fa91181efcded8682d179b40db272.png"
+            alt="Article Image"
+            class="w-full h-auto rounded-lg mb-4"
+          />
+          <div class="flex justify-between items-center text-gray-600 mb-2">
+            <span>🗓️ 2024-07-08</span> <span>👁️ 13 Views</span>
+            <span>✍️ Ade Mulyana</span>
+          </div>
+        </div>
+        <!-- Article -->
+        <article class="bg-white p-6 rounded-lg shadow-md mb-6">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">
+            Mengenal Lebih Dekat: Arsitektur dan Potensi Morph
+          </h2>
+          <div class="text-gray-700 leading-relaxed">
+            <h3 class="text-2xl font-semibold text-gray-800 mt-4 mb-2">
+              Menyusuri Arsitektur Morph
+            </h3>
+            <p>
+              Imajinasikan sebuah struktur bangunan dengan dua lantai utama:
+            </p>
+            <p>
+              <strong>Lantai 1 (L1):</strong> Di sinilah Ethereum, blockchain
+              utama, menyimpan semua data transaksi Morph dengan aman.
+            </p>
+            <p>
+              <strong>Lantai 2 (L2):</strong> Lantai ini adalah rantai samping
+              yang dioptimalkan untuk memproses transaksi dengan cepat dan biaya
+              gas yang rendah.
+            </p>
+            <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+              Komponen-Komponen Kunci Morph
+            </h4>
+            <p>
+              Lantai 2 tidaklah kosong; ia memiliki beberapa komponen penting
+              yang bekerja bersama untuk mencapai tujuan Morph:
+            </p>
+            <ol class="list-decimal list-inside">
+              <li>
+                <strong>Smart Contract:</strong> Ini adalah entitas cerdas yang
+                menjalankan kontrak pintar di L2, memverifikasi transaksi, dan
+                mengelola status aplikasi.
+              </li>
+              <li>
+                <strong>Proses Rollup:</strong> Proses ini mirip seperti bus
+                yang mengumpulkan transaksi dari L2, membuat bukti ZK
+                (Zero-Knowledge Proof), dan mengirimkan batch transaksi ke L1.
+              </li>
+              <li>
+                <strong>Node L2:</strong> Para pengawas L2 menjalankan perangkat
+                lunak Morph dan ikut serta dalam konsensus L2 untuk memastikan
+                operasi berjalan lancar.
+              </li>
+              <li>
+                <strong>Bukti ZK:</strong> Ini adalah bukti matematis yang
+                membuktikan validitas batch transaksi L2 tanpa perlu mengungkap
+                rincian transaksi individu.
+              </li>
+              <li>
+                <strong>Aggregator:</strong> Sebagai pengumpul bukti ZK yang
+                handal, aggregator mengirimkan bukti agregat ke L1 untuk
+                diproses.
+              </li>
+            </ol>
+            <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+              Proses Rollup yang Mempesona
+            </h4>
+            <p>
+              Proses rollup adalah inti dari keberhasilan Morph dalam mengatasi
+              masalah skalabilitas dan biaya gas. Berikut langkah-langkahnya
+              dengan singkat:
+            </p>
+            <ol class="list-decimal list-inside">
+              <li>
+                <strong>Pengumpulan Transaksi:</strong> Transaksi dari L2
+                dikumpulkan dan disusun dalam batch siap proses.
+              </li>
+              <li>
+                <strong>Pembuatan Bukti ZK:</strong> Bukti ZK dibuat untuk
+                membuktikan validitas batch transaksi tanpa harus membocorkan
+                detail transaksi individual.
+              </li>
+              <li>
+                <strong>Pengiriman Batch Transaksi:</strong> Batch transaksi
+                beserta bukti ZK dikirimkan ke L1 untuk diverifikasi.
+              </li>
+              <li>
+                <strong>Verifikasi Bukti:</strong> Di L1, bukti ZK diperiksa.
+                Jika valid, batch transaksi diproses dan status aplikasi
+                diperbarui.
+              </li>
+            </ol>
+            <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+              Manfaat Arsitektur Morph yang Menggoda
+            </h4>
+            <ul class="list-disc list-inside">
+              <li>
+                <strong>Skalabilitas Luar Biasa:</strong> Morph mampu memproses
+                ribuan transaksi per detik, melebihi jauh kemampuan Ethereum
+                saat ini.
+              </li>
+              <li>
+                <strong>Biaya Gas yang Terjangkau:</strong> Bertransaksi di
+                Morph jauh lebih murah dibandingkan Ethereum, mengurangi biaya
+                operasional secara signifikan.
+              </li>
+              <li>
+                <strong>Privasi Terjaga:</strong> Transaksi di L2 dilindungi
+                secara default, menjaga privasi pengguna dengan baik.
+              </li>
+              <li>
+                <strong>Kompatibilitas EVM yang Mudah:</strong> Morph sepenuhnya
+                kompatibel dengan lingkungan EVM, memungkinkan pengembang untuk
+                menggunakan alat dan kerangka kerja yang sudah dikenal.
+              </li>
+            </ul>
+            <h3 class="text-2xl font-semibold text-gray-800 mt-4 mb-2">
+              Memulai Perjalanan Anda dengan Morph
+            </h3>
+            <p>
+              Jika tertarik untuk membangun aplikasi di Morph, ada beberapa
+              sumber daya yang bisa Anda manfaatkan:
+            </p>
+            <ul class="list-disc list-inside">
+              <li>
+                <a
+                  href="https://docs.morphl2.io/"
+                  class="text-indigo-600 hover:underline"
+                  >Dokumentasi Pengembang</a
+                >: Kunjungi untuk panduan detail.
+              </li>
+              <li>
+                <a
+                  href="https://docs.morphl2.io/"
+                  class="text-indigo-600 hover:underline"
+                  >Tutorial</a
+                >: Ikuti untuk memulai dengan cepat.
+              </li>
+              <li>
+                <a
+                  href="https://github.com/datavized/morph"
+                  class="text-indigo-600 hover:underline"
+                  >Komunitas Morph di GitHub</a
+                >: Bergabunglah untuk mendapatkan dukungan dan berkolaborasi
+                dengan pengembang lainnya.
+              </li>
+            </ul>
+            <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+              Tips untuk Pengembang
+            </h4>
+            <ul class="list-disc list-inside">
+              <li>
+                Pelajari dokumentasi dengan baik dan ikuti tutorial untuk
+                memahami bagaimana membangun aplikasi di atas Morph.
+              </li>
+              <li>
+                Manfaatkan komunitas untuk mendapatkan bantuan dan berbagi
+                pengalaman.
+              </li>
+              <li>
+                Gunakan alat dan kerangka kerja yang sudah ada untuk mempercepat
+                pengembangan aplikasi.
+              </li>
+              <li>
+                Lakukan pengujian menyeluruh sebelum meluncurkan aplikasi secara
+                live.
+              </li>
+            </ul>
+            <h4 class="text-xl font-semibold text-gray-800 mt-4 mb-2">
+              Kesimpulan
+            </h4>
+            <p>
+              Morph hadir sebagai solusi inovatif untuk masalah skalabilitas dan
+              biaya gas di Ethereum. Arsitektur yang canggih memberikan peluang
+              baru bagi pengembang untuk menciptakan aplikasi blockchain yang
+              mengagumkan. Mari kita selami lebih dalam dunia Morph dan
+              bersama-sama menciptakan masa depan blockchain yang lebih
+              skalabel, terjangkau, dan memperhatikan privasi penggunanya!
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white shadow mt-8">
+      <div class="container mx-auto px-4 py-6 text-center">
+        <p class="text-gray-400">
+          &copy; 2024 My Blog. All rights reserved. @ADEMULYANA
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
